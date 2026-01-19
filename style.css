@@ -1,66 +1,88 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
 body {
-  background: #0b0f19;
-  color: #ffffff;
+  background-color: #0B0E11;
+  color: #EAECEF;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
 }
 
 .container {
   width: 100%;
-  max-width: 420px;
-  background: #12182b;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  padding: 20px;
 }
 
-h1 {
+.card {
+  background-color: #1E2329;
+  max-width: 420px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #2B3139;
+}
+
+.title {
   text-align: center;
-  color: #4da3ff;
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #F0B90B;
+}
+
+.title i {
+  margin-right: 8px;
 }
 
 .subtitle {
   text-align: center;
   font-size: 14px;
-  color: #9aa4c7;
+  color: #848E9C;
   margin-bottom: 25px;
 }
 
 .form input {
   width: 100%;
   padding: 12px;
-  margin-bottom: 12px;
-  border: none;
+  margin-bottom: 15px;
+  background-color: #0B0E11;
+  border: 1px solid #2B3139;
   border-radius: 6px;
-  background: #1c2340;
-  color: #fff;
+  color: #EAECEF;
+}
+
+.form input::placeholder {
+  color: #848E9C;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #F0B90B;
 }
 
 .form button {
   width: 100%;
   padding: 12px;
-  background: #4da3ff;
+  background-color: #F0B90B;
   border: none;
   border-radius: 6px;
-  color: #000;
   font-weight: bold;
   cursor: pointer;
+  color: #0B0E11;
 }
 
 .form button:hover {
   opacity: 0.9;
 }
 
-.output {
-  margin-top: 20px;
-  font-size: 14px;
-  line-height: 1.6;
-  color: #dce3ff;
+.disclaimer {
+  margin-top: 15px;
+  font-size: 12px;
+  text-align: center;
+  color: #848E9C;
 }
