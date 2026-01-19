@@ -32,10 +32,37 @@
         <button type="button">
           Initialize Analysis
         </button>
-      </form>
+      </div><div class="loader hidden" id="loader">
+  <div class="spinner"></div>
+  <p>Analyzing market conditions...</p>
+</div>
+
+<div class="results hidden" id="results">
+  <h3>AI Analysis Result</h3>
+
+  <div class="result-item">
+    <span>Market Bias</span>
+    <strong id="bias">Bullish</strong>
+  </div>
+
+  <div class="result-item">
+    <span>Suggested Action</span>
+    <strong id="action">BUY</strong>
+  </div>
+
+  <div class="result-item">
+    <span>Risk Level</span>
+    <strong id="risk">Medium</strong>
+  </div>
+
+  <div class="result-item">
+    <span>Confidence Score</span>
+    <strong id="confidence">87%</strong>
+  </div>
+</div>
 
       <p class="disclaimer">
-        Educational & analytical interface only.
+        Trading involve high risk, you are responsible of your decisions.
       </p>
 
     </div>
