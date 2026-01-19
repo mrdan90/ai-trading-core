@@ -1,31 +1,36 @@
-function runAnalysis() {
-  const output = document.getElementById("output");
-  output.innerHTML = "Initializing AI Trading Core...<br>";
+const button = document.querySelector("button");
+const loader = document.getElementById("loader");
+const results = document.getElementById("results");
+
+button.addEventListener("click", () => {
+  results.classList.add("hidden");
+  loader.classList.remove("hidden");
 
   setTimeout(() => {
-    output.innerHTML += "Analyzing market structure...<br>";
-  }, 800);
+    loader.classList.add("hidden");
+    generateFakeAnalysis();
+    results.classList.remove("hidden");
+  }, 3500);
+});
 
-  setTimeout(() => {
-    output.innerHTML += "Detecting liquidity zones...<br>";
-  }, 1600);
+function generateFakeAnalysis() {
+  const biases = ["Bullish", "Bearish", "Neutral"];
+  const actions = ["BUY", "SELL", "WAIT"];
+  const risks = ["Low", "Medium", "High"];
 
-  setTimeout(() => {
-    output.innerHTML += "Evaluating momentum and volatility...<br>";
-  }, 2400);
+  document.getElementById("bias").innerText =
+    randomFrom(biases);
 
-  setTimeout(() => {
-    const decisions = ["BUY", "SELL", "WAIT"];
-    const decision = decisions[Math.floor(Math.random() * decisions.length)];
+  document.getElementById("action").innerText =
+    randomFrom(actions);
 
-    const confidence = Math.floor(Math.random() * 20) + 70;
+  document.getElementById("risk").innerText =
+    randomFrom(risks);
 
-    output.innerHTML += `
-      <br><strong>Market Bias:</strong> ${decision}<br>
-      <strong>Structure:</strong> Validated<br>
-      <strong>Execution Zone:</strong> Identified<br>
-      <strong>Confidence Level:</strong> ${confidence}%<br>
-      <br><em>Analysis complete.</em>
-    `;
-  }, 3200);
+  document.getElementById("confidence").innerText =
+    Math.floor(70 + Math.random() * 25) + "%";
+}
+
+function randomFrom(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
 }
