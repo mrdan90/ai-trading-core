@@ -2,71 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AI Trading Core</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
-    <div class="card">
-
-      <h1 class="title">
-        <i class="fa-solid fa-robot"></i>
-        AI Trading Core
-      </h1>
-
-      <p class="subtitle">
-        Intelligent market analysis engine designed to simulate human-like trading decisions.
-      </p>
-
-      <form class="form">
-        <input type="text" placeholder="Account ID or Login">
-        <input type="password" placeholder="Password">
-        <input type="text" placeholder="Server / Broker">
-
-        <button type="button">Initialize Analysis
-          
-        </button>
-      </div><div class="loader hidden" id="loader">
-  <div class="spinner"></div>
-  <p>Analyzing market conditions...</p>
-</div>
-
-<div class="results hidden" id="results">
-  <h3>AI Analysis Result</h3>
-
-  <div class="result-item">
-    <span>Market Bias</span>
-    <strong id="bias">Bullish</strong>
-  </div>
-
-  <div class="result-item">
-    <span>Suggested Action</span>
-    <strong id="action">BUY</strong>
-  </div>
-
-  <div class="result-item">
-    <span>Risk Level</span>
-    <strong id="risk">Medium</strong>
-  </div>
-
-  <div class="result-item">
-    <span>Confidence Score</span>
-    <strong id="confidence">87%</strong>
-  </div>
-</div>
-
-      <p class="disclaimer">
-        Trading involve high risk, you are responsible of your decisions.
-      </p>
-
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      🤖 <span>AI Trading Core</span>
     </div>
-  </div>
 
+    <p class="tagline">
+      Automated trading. Risk-managed. Transparent.
+    </p>
+
+    <div class="header-buttons">
+      <button class="btn secondary">Binance Connection 🔐</button>
+      <button class="btn primary">Dashboard 📊</button>
+    </div>
+  </header>
+
+  <!-- WHAT THE BOT DOES -->
+  <section class="section">
+    <h2>What the bot does</h2>
+    <ul class="info-list">
+      <li>🧠 Strategy: Hybrid (Trend-following + SMC)</li>
+      <li>⏱ Timeframes: M15 / H1 / H4</li>
+      <li>💱 Traded pairs: BTCUSDT, ETHUSDT</li>
+      <li>🤖 Execution: Fully automated</li>
+    </ul>
+  </section>
+
+  <!-- PERFORMANCE -->
+  <section class="section">
+    <h2>Performance Overview</h2>
+
+    <div class="stats">
+      <div>📊 Win rate: 58%</div>
+      <div>📉 Max drawdown: -12%</div>
+      <div>📈 Avg monthly ROI: 6.5%</div>
+      <div>⚖️ Risk/Reward: 1 : 2.3</div>
+    </div>
+
+    <p class="disclaimer">
+      ⚠️ Past performance does not guarantee future results.
+    </p>
+  </section>
+
+  <!-- RISK MANAGEMENT -->
+  <section class="section">
+    <h2>Risk Management</h2>
+    <ul class="info-list">
+      <li>🎯 Risk per trade: 1%</li>
+      <li>🛑 Automatic Stop Loss & Take Profit</li>
+      <li>🚫 Overtrading protection</li>
+      <li>🧯 Manual Kill Switch</li>
+      <li>⚙️ Modes: Conservative / Aggressive</li>
+    </ul>
+
+    <p class="note">
+      The user always remains in control.
+    </p>
+  </section>
+
+  <!-- SECURITY -->
+  <section class="section">
+    <h2>Security & Connection</h2>
+    <ul class="info-list">
+      <li>🔑 Binance API (read & trade only)</li>
+      <li>❌ Withdrawals disabled</li>
+      <li>🔐 Encrypted credentials</li>
+      <li>📜 Best practices compliant</li>
+    </ul>
+  </section>
+
+  <!-- ACTION -->
+  <section class="section center">
+    <button id="analyzeBtn" class="btn primary large">
+      Initialize Analysis ⚙️
+    </button>
+
+    <p id="status" class="status-text"></p>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
