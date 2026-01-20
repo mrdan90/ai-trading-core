@@ -1,1 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+body {
+  background-color: #0b0e11;
+  color: #eaecef;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+.card {
+  max-width: 520px;
+  margin: auto;
+  background-color: #161a1e;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+.brand h1 {
+  color: #f0b90b;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.robot {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #848e9c;
+  margin-bottom: 24px;
+}
+
+.welcome h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.welcome p {
+  font-size: 14px;
+  color: #cfd3dc;
+  margin-bottom: 10px;
+}
+
+.restricted {
+  color: #f0b90b;
+  font-size: 13px;
+}
+
+.license-box {
+  margin-top: 24px;
+}
+
+.license-box input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 6px;
+  border: none;
+  background-color: #0b0e11;
+  color: #eaecef;
+  margin-bottom: 12px;
+  outline: none;
+}
+
+.license-box button {
+  width: 100%;
+  padding: 14px;
+  background-color: #f0b90b;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.license-box button:hover {
+  opacity: 0.9;
+}
+
+#errorMessage {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #f6465d;
+}
+
+.security-note {
+  font-size: 12px;
+  color: #848e9c;
+  margin-top: 20px;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #848e9c;
+}
+
+footer .links a {
+  margin: 0 8px;
+  color: #848e9c;
+  text-decoration: none;
+}
+
+footer .links a:hover {
+  color: #f0b90b;
+}
+
+.support {
+  margin-top: 12px;
+}
+
+.support a {
+  color: #f0b90b;
+  text-decoration: none;
+}
+
+.version {
+  font-size: 11px;
+  color: #5e6673;
+  }
