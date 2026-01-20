@@ -11,19 +11,61 @@
 
   <!-- HEADER -->
   <header class="header">
-    <div class="logo">
-      🤖 <span>AI Trading Core</span>
-    </div>
-
-    <p class="tagline">
-      Automated trading. Risk-managed. Transparent.
-    </p>
+    <div class="logo">🤖 AI Trading Core</div>
+    <p class="tagline">Automated trading. Risk-managed. Transparent.</p>
 
     <div class="header-buttons">
       <button class="btn secondary">Binance Connection 🔐</button>
       <button class="btn primary">Dashboard 📊</button>
     </div>
   </header>
+
+  <!-- ONBOARDING -->
+  <section class="section">
+    <h2>Getting Started</h2>
+
+    <ol class="steps">
+      <li>🔗 Connect your Binance API</li>
+      <li>⚖️ Choose a risk profile</li>
+      <li>▶️ Launch the bot</li>
+    </ol>
+
+    <p class="note">No complexity. No unnecessary steps.</p>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section class="section">
+    <h2>User Dashboard</h2>
+
+    <div class="dashboard">
+      <div class="card">
+        <span>Account Balance</span>
+        <strong>$12,480</strong>
+      </div>
+
+      <div class="card">
+        <span>Open Trades</span>
+        <strong>2</strong>
+      </div>
+
+      <div class="card">
+        <span>Closed Trades</span>
+        <strong>18</strong>
+      </div>
+
+      <div class="card">
+        <span>Real-time PnL</span>
+        <strong class="positive">+4.2%</strong>
+      </div>
+    </div>
+
+    <div class="bot-control">
+      <button id="toggleBot" class="btn primary large">
+        Bot OFF 🛑
+      </button>
+      <p id="botStatus" class="status-text">Bot is currently inactive.</p>
+    </div>
+  </section>
 
   <!-- WHAT THE BOT DOES -->
   <section class="section">
@@ -36,56 +78,33 @@
     </ul>
   </section>
 
-  <!-- PERFORMANCE -->
-  <section class="section">
-    <h2>Performance Overview</h2>
-
-    <div class="stats">
-      <div>📊 Win rate: 58%</div>
-      <div>📉 Max drawdown: -12%</div>
-      <div>📈 Avg monthly ROI: 6.5%</div>
-      <div>⚖️ Risk/Reward: 1 : 2.3</div>
-    </div>
-
-    <p class="disclaimer">
-      ⚠️ Past performance does not guarantee future results.
-    </p>
-  </section>
-
   <!-- RISK MANAGEMENT -->
   <section class="section">
     <h2>Risk Management</h2>
     <ul class="info-list">
       <li>🎯 Risk per trade: 1%</li>
-      <li>🛑 Automatic Stop Loss & Take Profit</li>
+      <li>🛑 Stop Loss & Take Profit enforced</li>
       <li>🚫 Overtrading protection</li>
       <li>🧯 Manual Kill Switch</li>
-      <li>⚙️ Modes: Conservative / Aggressive</li>
+      <li>⚙️ Conservative / Aggressive modes</li>
     </ul>
+    <p class="note">The user always remains in control.</p>
+  </section>
 
-    <p class="note">
-      The user always remains in control.
+  <!-- LEGAL -->
+  <section class="section legal">
+    <h2>Legal & Disclaimers</h2>
+
+    <p>
+      Trading cryptocurrencies involves risk. Past performance does not guarantee future results.
+      AI Trading Core does not provide financial advice.
     </p>
-  </section>
 
-  <!-- SECURITY -->
-  <section class="section">
-    <h2>Security & Connection</h2>
-    <ul class="info-list">
-      <li>🔑 Binance API (read & trade only)</li>
-      <li>❌ Withdrawals disabled</li>
-      <li>🔐 Encrypted credentials</li>
-      <li>📜 Best practices compliant</li>
+    <ul class="legal-links">
+      <li>📄 Terms of Use</li>
+      <li>🔐 Privacy Policy</li>
+      <li>⚠️ Trading Disclaimer</li>
     </ul>
-  </section>
-
-  <!-- ACTION -->
-  <section class="section center">
-    <button id="analyzeBtn" class="btn primary large">
-      Initialize Analysis ⚙️
-    </button>
-
-    <p id="status" class="status-text"></p>
   </section>
 
   <script src="script.js"></script>
