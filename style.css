@@ -1,9 +1,10 @@
 :root {
-  --binance-yellow: #F0B90B;
-  --binance-black: #0B0E11;
-  --binance-dark: #1E2329;
-  --text-light: #EAECEF;
-  --text-muted: #9CA3AF;
+  --yellow: #F0B90B;
+  --black: #0B0E11;
+  --dark: #1E2329;
+  --light: #EAECEF;
+  --muted: #9CA3AF;
+  --green: #0ECB81;
 }
 
 * {
@@ -13,13 +14,13 @@
 
 body {
   margin: 0;
-  background: var(--binance-dark);
-  color: var(--text-light);
+  background: var(--dark);
+  color: var(--light);
 }
 
 /* HEADER */
 .header {
-  background: var(--binance-black);
+  background: var(--black);
   padding: 50px 20px;
   text-align: center;
 }
@@ -27,12 +28,12 @@ body {
 .logo {
   font-size: 28px;
   font-weight: bold;
-  color: var(--binance-yellow);
+  color: var(--yellow);
 }
 
 .tagline {
-  margin-top: 10px;
-  color: var(--text-muted);
+  margin-top: 8px;
+  color: var(--muted);
 }
 
 .header-buttons {
@@ -45,13 +46,56 @@ body {
 /* SECTIONS */
 .section {
   padding: 60px 20px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 
 .section h2 {
-  color: var(--binance-yellow);
+  color: var(--yellow);
   margin-bottom: 20px;
+}
+
+/* ONBOARDING */
+.steps {
+  padding-left: 20px;
+}
+
+.steps li {
+  margin-bottom: 10px;
+}
+
+/* DASHBOARD */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--black);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.card span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.card strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 22px;
+}
+
+.positive {
+  color: var(--green);
+}
+
+/* BOT CONTROL */
+.bot-control {
+  margin-top: 30px;
+  text-align: center;
 }
 
 /* LISTS */
@@ -61,31 +105,23 @@ body {
 }
 
 .info-list li {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-/* STATS */
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+/* LEGAL */
+.legal {
+  font-size: 14px;
+  color: var(--muted);
 }
 
-/* TEXT */
-.disclaimer {
-  margin-top: 20px;
-  font-size: 13px;
-  color: var(--text-muted);
-}
-
-.note {
+.legal-links {
+  list-style: none;
+  padding: 0;
   margin-top: 15px;
-  font-style: italic;
-  color: var(--text-muted);
 }
 
-.center {
-  text-align: center;
+.legal-links li {
+  margin-bottom: 6px;
 }
 
 /* BUTTONS */
@@ -98,23 +134,29 @@ body {
 }
 
 .btn.primary {
-  background: var(--binance-yellow);
+  background: var(--yellow);
   color: black;
 }
 
 .btn.secondary {
   background: transparent;
-  border: 1px solid var(--binance-yellow);
-  color: var(--binance-yellow);
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
 }
 
 .btn.large {
-  padding: 15px 30px;
+  padding: 15px 35px;
   font-size: 16px;
 }
 
-/* STATUS */
-.status-text {
+/* TEXT */
+.note {
   margin-top: 15px;
-  color: var(--text-muted);
+  font-style: italic;
+  color: var(--muted);
+}
+
+.status-text {
+  margin-top: 10px;
+  color: var(--muted);
 }
