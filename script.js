@@ -1,36 +1,11 @@
-const button = document.querySelector("button");
-const loader = document.getElementById("loader");
-const results = document.getElementById("results");
+const analyzeBtn = document.getElementById("analyzeBtn");
+const statusText = document.getElementById("status");
 
-button.addEventListener("click", () => {
-  results.classList.add("hidden");
-  loader.classList.remove("hidden");
+analyzeBtn.addEventListener("click", () => {
+  statusText.textContent = "Initializing market analysis...";
 
   setTimeout(() => {
-    loader.classList.add("hidden");
-    generateFakeAnalysis();
-    results.classList.remove("hidden");
-  }, 3500);
+    statusText.textContent =
+      "Analysis running. Monitoring BTCUSDT & ETHUSDT with controlled risk.";
+  }, 2000);
 });
-
-function generateFakeAnalysis() {
-  const biases = ["Bullish", "Bearish", "Neutral"];
-  const actions = ["BUY", "SELL", "WAIT"];
-  const risks = ["Low", "Medium", "High"];
-
-  document.getElementById("bias").innerText =
-    randomFrom(biases);
-
-  document.getElementById("action").innerText =
-    randomFrom(actions);
-
-  document.getElementById("risk").innerText =
-    randomFrom(risks);
-
-  document.getElementById("confidence").innerText =
-    Math.floor(70 + Math.random() * 25) + "%";
-}
-
-function randomFrom(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
