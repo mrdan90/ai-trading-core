@@ -1,17 +1,18 @@
-const toggleBot = document.getElementById("toggleBot");
-const botStatus = document.getElementById("botStatus");
+const toggleBtn = document.getElementById("toggleBot");
+const statusText = document.getElementById("botStatus");
 
 let botRunning = false;
 
-toggleBot.addEventListener("click", () => {
+toggleBtn.addEventListener("click", () => {
   botRunning = !botRunning;
 
   if (botRunning) {
-    toggleBot.textContent = "Bot ON ✅";
-    botStatus.textContent =
-      "Bot is active. Monitoring markets with controlled risk.";
+    statusText.textContent = "ON";
+    statusText.style.color = "#0ecb81";
+    toggleBtn.textContent = "Stop Bot";
   } else {
-    toggleBot.textContent = "Bot OFF 🛑";
-    botStatus.textContent = "Bot is currently inactive.";
+    statusText.textContent = "OFF";
+    statusText.style.color = "#f6465d";
+    toggleBtn.textContent = "Initialize Analysis";
   }
 });
