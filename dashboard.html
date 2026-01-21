@@ -2,95 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AI Trading Core | Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="dashboard.css"/>
 </head>
 <body>
 
   <!-- HEADER -->
   <header class="header">
-    <div class="logo">
-      🤖 <span>AI Trading Core</span>
-    </div>
-    <nav class="nav">
-      <span class="status">Status: <strong id="botStatus">OFF</strong></span>
-      <button id="toggleBot" class="btn-primary">Initialize Analysis</button>
-    </nav>
+    <h1>🤖 AI Trading Core</h1>
+    <p>User Dashboard</p>
   </header>
 
   <!-- MAIN -->
   <main class="container">
 
-    <!-- DASHBOARD STATS -->
-    <section class="stats-grid">
+    <!-- STATS -->
+    <section class="stats">
       <div class="card">
-        <h4>Account Balance</h4>
-        <p class="big">$10,250</p>
+        <h3>Account Balance</h3>
+        <p class="value">$12,480</p>
       </div>
 
       <div class="card">
-        <h4>Open Trades</h4>
-        <p class="big">2</p>
+        <h3>Real-time PnL</h3>
+        <p class="value positive">+4.2%</p>
       </div>
 
       <div class="card">
-        <h4>Closed Trades</h4>
-        <p class="big">18</p>
+        <h3>Open Trades</h3>
+        <p class="value">2</p>
       </div>
 
       <div class="card">
-        <h4>PNL (Today)</h4>
-        <p class="big positive">+3.4%</p>
+        <h3>Closed Trades</h3>
+        <p class="value">18</p>
       </div>
+    </section>
+
+    <!-- BOT CONTROL -->
+    <section class="bot-control">
+      <h2>Bot Control</h2>
+      <button id="botToggle" class="bot-off">BOT OFF</button>
+      <p id="botStatus">Bot is currently inactive</p>
+      <small>You remain in full control at all times.</small>
     </section>
 
     <!-- BOT INFO -->
-    <section class="card full">
-      <h3>Bot Overview</h3>
-      <ul class="info-list">
-        <li><strong>Strategy:</strong> Hybrid (SMC + Trend Following)</li>
-        <li><strong>Timeframes:</strong> M15 / H1</li>
-        <li><strong>Pairs:</strong> BTCUSDT, ETHUSDT</li>
-        <li><strong>Mode:</strong> Semi-Automated</li>
-        <li><strong>Risk per Trade:</strong> 1%</li>
-      </ul>
-    </section>
+    <section class="info-grid">
 
-    <!-- PERFORMANCE -->
-    <section class="card full">
-      <h3>Performance Metrics</h3>
-      <div class="metrics">
-        <div>Win Rate: <strong>62%</strong></div>
-        <div>Max Drawdown: <strong>-6.8%</strong></div>
-        <div>Avg Monthly ROI: <strong>8%</strong></div>
-        <div>Risk / Reward: <strong>1 : 2.4</strong></div>
+      <div class="info-card">
+        <h2>What the bot does</h2>
+        <ul>
+          <li>🧠 Strategy: Hybrid (Trend-following + SMC)</li>
+          <li>⏱ Timeframes: M15 / H1 / H4</li>
+          <li>💱 Pairs: BTCUSDT, ETHUSDT</li>
+          <li>🤖 Execution: Fully automated</li>
+        </ul>
       </div>
 
-      <p class="disclaimer">
-        Past performance does not guarantee future results.
-      </p>
-    </section>
+      <div class="info-card">
+        <h2>Risk Management</h2>
+        <ul>
+          <li>🎯 Risk per trade: 1%</li>
+          <li>🛑 Stop Loss & Take Profit enforced</li>
+          <li>🚫 Overtrading protection</li>
+          <li>🧯 Manual kill switch</li>
+          <li>⚙️ Conservative / Aggressive modes</li>
+        </ul>
+      </div>
 
-    <!-- SECURITY -->
-    <section class="card full">
-      <h3>Security & Control</h3>
-      <ul class="info-list">
-        <li>🔐 API Access: Trade only (no withdrawals)</li>
-        <li>🛑 Manual Kill Switch available</li>
-        <li>📉 Overtrading protection enabled</li>
-        <li>👤 User remains in full control</li>
-      </ul>
     </section>
 
   </main>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2025 AI Trading Core. All rights reserved.</p>
-    <p>Educational & analytical platform only.</p>
+    <p>Past performance does not guarantee future results.</p>
+    <p>© 2026 AI Trading Core. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="dashboard.js"></script>
 </body>
 </html>
