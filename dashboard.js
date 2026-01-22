@@ -1,18 +1,18 @@
-const toggleBtn = document.getElementById("toggleBot");
-const statusText = document.getElementById("botStatus");
+const botToggle = document.getElementById("botToggle");
+const botStatus = document.getElementById("botStatus");
 
-let botRunning = false;
+let isBotOn = false;
 
-toggleBtn.addEventListener("click", () => {
-  botRunning = !botRunning;
+botToggle.addEventListener("click", () => {
+  isBotOn = !isBotOn;
 
-  if (botRunning) {
-    statusText.textContent = "ON";
-    statusText.style.color = "#0ecb81";
-    toggleBtn.textContent = "Stop Bot";
+  if (isBotOn) {
+    botToggle.textContent = "BOT ON";
+    botToggle.className = "bot-on";
+    botStatus.textContent = "Bot is currently active";
   } else {
-    statusText.textContent = "OFF";
-    statusText.style.color = "#f6465d";
-    toggleBtn.textContent = "Initialize Analysis";
+    botToggle.textContent = "BOT OFF";
+    botToggle.className = "bot-off";
+    botStatus.textContent = "Bot is currently inactive";
   }
 });
